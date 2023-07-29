@@ -25,7 +25,7 @@ After if you using windows go to files project open fonts folder and install all
 <br>
 
 ## How To Work?
-### Temporarily in this version of the project (1.0.0) there is only CaptchaGenerator function for captcha generator. This function has 7 inputs:
+### Temporarily in this version of the project (1.1.2) there is only CaptchaGenerator function for captcha generator. This function has 7 inputs:
 * NumberGen
 * ValuesCaptcha (optional)
 * NameExport (optional)
