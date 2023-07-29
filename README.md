@@ -25,7 +25,7 @@ After if you using windows go to files project open fonts folder and install all
 <br>
 
 ## How To Work?
-### Temporarily in this version of the project (1.1.2) there is only CaptchaGenerator function for captcha generator. This function has 7 inputs:
+### Temporarily in this version of the project (1.1.3) there is only CaptchaGenerator function for captcha generator. This function has 7 inputs:
 * NumberGen
 * ValuesCaptcha (optional)
 * NameExport (optional)
@@ -56,7 +56,7 @@ Output Console :
 Generated captcha : v*8X$
 ```
 Output Image :
-![Example Image](CaptchaGenerat.png)
+![Example Image](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/CaptchaGenerat.png)
 
 ## Example In Telegram (Pyrogram) :
 <br>
@@ -86,7 +86,7 @@ async def start(client : Client , message : Message):
             await message.reply_text("Capcha is not right\nTry Again /start")
 app.run()
 ```
-![Example Image](TestTelegramBot.png)
+![Example Image](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestTelegramBot.png)
 
 # By <a href="https://t.me/sepehr0day">Sepehr0Day</a>
 ## update in coming...
