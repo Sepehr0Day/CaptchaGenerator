@@ -1,9 +1,8 @@
 # Captcha Generator
   <br>
-  <a href="#"><img src="https://img.shields.io/badge/Captcha Telegtam-blue" ></a>
+  <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/CaptchaGenerator-1.1.3-Green" ></a>
   <a href="https://pypi.org/project/Pyrogram/"><img src="https://img.shields.io/badge/pyrogram-2.0.106-orange" ></a>
   <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/Pillow-9.4.0-red" ></a>
-  <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/CaptchaGenerator-1.0.0-Green" ></a>
   
 <br><br>
 
