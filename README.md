@@ -41,7 +41,7 @@ def main():
     NumberGen = 5
     NameExport = "CaptchaGenerat"  
     ValuesCaptcha = "012356789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm!@#$%&*"  
-    PathExport = r"C:\Users\sepeh\Desktop\Captcha Generator" 
+    PathExport = r"C:\Path" 
     Fonts = ['AmaticSC-Bold.ttf', 'AmaticSC-Regular.ttf', 'ArchitectsDaughter-Regular.ttf']
     Colors = ["red" , "blue"] 
     BackgroundS = ["Background/Background1.png", "Background/Background2.png", "Background/Background3.png"] 
