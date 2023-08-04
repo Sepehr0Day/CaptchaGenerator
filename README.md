@@ -43,8 +43,10 @@ After if you using windows go to files project open fonts folder and install all
       * NameExport
       * PATHEXport
 <br>
+
 #### <strong>In order not to create the Capcha Bug process, it was removed from the project. But you can still download this link and download your font.</strong>
-<br><br>
+
+##### <a href="https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/Font%20and%20Background.rar">Download Font and Background</a>
 
 ## Example CaptchaGenerat :
 ```python
