@@ -1,6 +1,6 @@
 # Captcha Generator
   <br>
-  <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/CaptchaGenerator-1.1.4-Green" ></a>
+  <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/CaptchaGenerator-1.1.5-Green" ></a>
   <a href="https://pypi.org/project/Pyrogram/"><img src="https://img.shields.io/badge/pyrogram-2.0.106-orange" ></a>
   <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/Pillow-9.4.0-red" ></a>
   
@@ -25,7 +25,7 @@ After if you using windows go to files project open fonts folder and install all
 <br>
 
 ## How To Work?
-### This library has 2 function for Captcha Generator:
+### This library has 3 function for Captcha Generator:
    * 1- CaptchaGenerat
        * Numbergen
        * ValueScaptcha
@@ -41,12 +41,15 @@ After if you using windows go to files project open fonts folder and install all
       * Backgrounds
       * Fonts
       * NameExport
-      * PATHEXport
+      * PathExport
+   * 3- CaptchaGeneratRandom (Only Use In Bots)
+      * PathFolder
+      * NumberRandomSelect
 <br>
 
 #### <strong>In order not to create the Capcha Bug process, it was removed from the project. But you can still download this link and download your font.</strong>
 
-##### <a href="https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/Font%20and%20Background.rar">Download Font and Background</a>
+##### <a href="https://github.com/Sepehr0Day/CaptchaGenerator/blob/main/Font%20%2C%20Background%20And%20Photo.zip">Download Font , Background And Photo</a>
 
 ## Example CaptchaGenerat :
 ```python
@@ -167,10 +170,85 @@ async def handle_callback(client: Client, callback_query: CallbackQuery):
 app.run()
 ```
 
+## Example CaptchaGeneratorImageRandom In Telegram (Pyrogram) :
+<br><strong>Note!
+If you do not use the default photos of the project and<br> use your own photos, the name of the photo <br>is the same as the name that is placed in the button to<br> select the correct captcha option.
+So be careful in choosing the photo<br> name (only png and jpg are supported)!</strong>
+
+```python
+import os
+import random
+import requests
+from pyrogram import Client
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from CaptchaGenerator.CaptchaGenerator import CaptchaGeneratorImageRandom
+
+app = Client(
+    'app',
+    api_id=123,  # API ID
+    api_hash="",  # API HASH
+    bot_token=""  # BOT Token
+)
+
+correct_answer = ""
+data_user = []
+
+def translate_text(text, target_lang):
+    url = "https://translate.google.com/translate_a/single"
+    params = {
+        "client": "gtx",
+        "sl": "en", 
+        "tl": target_lang,
+        "dt": "t",
+        "q": text
+    }
+    response = requests.get(url, params=params)
+    data = response.json()
+    translated_text = data[0][0][0]
+    return translated_text
+
+@app.on_message()
+async def start(client: Client, message: Message):
+    global correct_answer
+    if message.text == "/start":
+        if message.from_user.id in data_user:
+            await message.reply_text("Welcome to my bot")
+        else:
+            folder_path = r"C:\Path\Photos"
+            ImageSelected, ImageSelectedName, ImageSelectedFormat, ImageNamesInFolder = CaptchaGeneratorImageRandom(folder_path , 7)
+            Targetlanguage = "fa" #You Can Set Your Language For Translate
+            translated_names = [f"{name} | {translate_text(name, Targetlanguage).strip()}"
+                                for name in ImageNamesInFolder]
+            correct_answer = ImageSelectedName
+            randomized_indices = list(range(len(translated_names)))
+            random.shuffle(randomized_indices)
+            
+            keyboard_buttonsin = [
+                [InlineKeyboardButton(translated_names[i], callback_data=ImageNamesInFolder[i])]
+                for i in randomized_indices
+            ]
+            keyboard_markupin = InlineKeyboardMarkup(keyboard_buttonsin)
+            await message.reply_photo(photo=folder_path + r"\\" + ImageSelected, reply_markup=keyboard_markupin)
+
+@app.on_callback_query()
+async def handle_callback(client: Client, callback_query: CallbackQuery):
+    if callback_query.data == correct_answer:
+        await callback_query.answer("Captcha is True", show_alert=True, cache_time=8)
+        await callback_query.message.delete(revoke=True)
+        data_user.append(callback_query.from_user.id)
+        await callback_query.message.reply_text("Welcome to my bot")
+    else:
+        await callback_query.answer("ERROR!", show_alert=True, cache_time=8)
+        await callback_query.message.delete(revoke=True)
+
+app.run()
+```
+
 ## Image CaptchaGenerat in Telegram(Pyrogram) :
 ![Image1](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestTelegramBot.png)
 ## Vidoe Test CaptchaGeneratRandom in Telegram(Pyrogram) :
 https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/35b31a23-5786-4762-bb5c-d27651486d67
-
+## Image CaptchaGeneratorImageRandom in Telegram(Pyrogram) :
+![Image2](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestCaptchaGeneratorImageRandom.png)
 # By <a href="https://t.me/sepehr0day">Sepehr0Day</a>
 ## update in coming...
