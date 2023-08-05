@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='CaptchaGenerator',
-    version='1.1.4',
+    version='1.1.5',
     license='MIT',
     description='A library for captcha generator for Telegram bots',
     author='Sepehr0Day',
