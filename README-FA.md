@@ -11,7 +11,7 @@
 
 ## درباره پروژه
 ### این پروژه برای ربات های تلگرامی طراحی شده است تا تأیید اعتبار کاربران را آسان تر کند. البته شما می توانید از این پروژه در جای دیگر استفاده کنید و این پروژه فقط برای ربات های تلگرام نیست.
-<a href="https://github.com/Sepehr0Day/CaptchaGenerator/edit/main/README.md">For Read English Documents Click Here.</a> 
+<a href="https://github.com/Sepehr0Day/CaptchaGenerator/blob/main/README.md">For Read English Documents Click Here.</a> 
 <br><br>
 
 ## نصب
