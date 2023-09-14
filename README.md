@@ -11,7 +11,7 @@
 
 ## About Project
 ### The project is designed for Captcha telegram robot to make it easier to authenticate users. <br> Of course you can use this project elsewhere and this project is not just for telegram robots.
-<a href="#">برای خواندن داکیومنت فارسی اینجا کلیک کنید.</a> 
+<a href="https://github.com/Sepehr0Day/CaptchaGenerator/blob/main/README-FA.md">برای خواندن داکیومنت فارسی اینجا کلیک کنید.</a> 
 <br><br>
 
 ## Install 
@@ -65,7 +65,7 @@ pip install CaptchaGenerator
       * PathExport
 <br>
 
-### <a href="https://github.com/Sepehr0Day/CaptchaGenerator/blob/main/Font%20%2C%20Background%20And%20Photo.zip">You can download files requirement resources from here</a>
+### <a href="https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/Requirement%20Resources.rar">You can download files requirement resources from here</a>
 
 ## Example CaptchaGenerat :
 ```python
@@ -111,16 +111,14 @@ if __name__ == "__main__":
 https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/35b31a23-5786-4762-bb5c-d27651486d67
 ## Image CaptchaGeneratorImageRandom in Telegram(Pyrogram) :
 ![Image2](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestCaptchaGeneratorImageRandom.png)
-## Vidoe Test CaptchaGeneratorImageRandom in Telegram(Pyrogram) :
-
-## Vidoe Test CaptchaGeneratorImageDirectionRando in Telegram(Pyrogram) :
-
+## Vidoe Test CaptchaGeneratorImageDirectionRandom in Telegram(Pyrogram) :
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/b6075908-0f42-4673-b02d-8dd04200952e
 ## Vidoe Test CaptchaGeneratorAudio in Telegram(Pyrogram) :
-
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/dcd203c8-a3db-4152-a24e-2694fba0cb8b
 ## Vidoe Test CaptchaGeneratorMath in Telegram(Pyrogram) :
-
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/a3e84e0d-3749-49e4-8d11-50ce53618551
 ## Vidoe Test CaptchaGeneratRandomWord in Telegram(Pyrogram) :
-
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/ebd9aa1c-4d6b-48fb-8048-1037bfa42cb1
 # By <a href="https://t.me/sepehr0day">Sepehr0Day</a>
 
 ## update in coming...
