@@ -11,7 +11,7 @@
 
 ## درباره پروژه
 ### این پروژه برای ربات های تلگرامی طراحی شده است تا تأیید اعتبار کاربران را آسان تر کند. البته شما می توانید از این پروژه در جای دیگر استفاده کنید و این پروژه فقط برای ربات های تلگرام نیست.
-<a href="#">For Read English Documents Click Here.</a> 
+<a href="https://github.com/Sepehr0Day/CaptchaGenerator/edit/main/README.md">For Read English Documents Click Here.</a> 
 <br><br>
 
 ## نصب
@@ -109,15 +109,13 @@ if __name__ == "__main__":
 https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/35b31a23-5786-4762-bb5c-d27651486d67
 ## عملکرد CaptchaGeneratorImageRandom در تلگرام(پایروگرام)  :
 ![Image2](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestCaptchaGeneratorImageRandom.png)
-## ویدیو عملکرد CaptchaGeneratorImageRandom در تلگرام(پایروگرام)  :
-
-## ویدیو عملکرد CaptchaGeneratorImageDirectionRando در تلگرام(پایروگرام)  :
-
+## ویدیو عملکرد mCaptchaGeneratorImageDirectionRando در تلگرام(پایروگرام)  :
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/b6075908-0f42-4673-b02d-8dd04200952e
 ## ویدیو عملکرد CaptchaGeneratorAudio در تلگرام(پایروگرام)  :
-
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/dcd203c8-a3db-4152-a24e-2694fba0cb8b
 ## ویدیو عملکرد CaptchaGeneratorMath در تلگرام(پایروگرام)  :
-
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/a3e84e0d-3749-49e4-8d11-50ce53618551
 ## ویدیو عملکرد CaptchaGeneratRandomWord در تلگرام(پایروگرام)  :
-
+https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/ebd9aa1c-4d6b-48fb-8048-1037bfa42cb1
 # طراحی و توسعه توسط <a href="https://t.me/sepehr0day">Sepehr0Day</a>
 ## اپدیت بعدی بزودی...
