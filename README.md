@@ -27,7 +27,7 @@ pip install CaptchaGenerator
 <br>
 
 ## How To Work?
-### This library has 3 function for Captcha Generator:
+### This library has 7 function for Captcha Generator:
    * 1- CaptchaGenerat
       * Numbergen
       * ValueScaptcha
