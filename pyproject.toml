@@ -32,7 +32,7 @@ audio = [
     "gTTS>=2.3.2",
 ]
 telegram = [
-    "telethon>=1.30.0",
+    "telethon>=1.43.2",
 ]
 dev = [
     "build",
