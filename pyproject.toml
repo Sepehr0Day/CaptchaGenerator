@@ -29,7 +29,7 @@ dependencies = [
 
 [project.optional-dependencies]
 audio = [
-    "gTTS>=2.3.2",
+    "gTTS>=2.5.4",
 ]
 telegram = [
     "telethon>=1.30.0",
