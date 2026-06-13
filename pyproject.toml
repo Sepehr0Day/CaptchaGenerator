@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "CaptchaGenerator"
+version = "2.0.0"
+description = "A modular and customizable CAPTCHA generation library."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Sepehr0Day" }
+]
+keywords = ["captcha", "security", "pillow", "accessibility", "image"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Typing :: Typed",
+]
+dependencies = [
+    "Pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+audio = [
+    "gTTS>=2.3.2",
+]
+telegram = [
+    "telethon>=1.30.0",
+]
+dev = [
+    "build",
+    "pytest",
+    "ruff",
+    "mypy",
+]
+
+[project.urls]
+Documentation = "https://github.com/Sepehr0Day/CaptchaGenerator/wiki"
+Repository = "https://github.com/Sepehr0Day/CaptchaGenerator"
+Issues = "https://github.com/Sepehr0Day/CaptchaGenerator/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["CaptchaGenerator"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/CaptchaGenerator",
+    "/Examples",
+    "/tests",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+    "/setup.py",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true

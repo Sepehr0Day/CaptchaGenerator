@@ -1,126 +1,80 @@
-# Captcha Generator
-  <br>
-  <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/CaptchaGenerator-1.1.6-Green" ></a>
-  <a href="https://pypi.org/project/Pyrogram/"><img src="https://img.shields.io/badge/pyrogram-2.0.106-orange" ></a>
-  <a href="https://pypi.org/project/Pillow/"><img src="https://img.shields.io/badge/Pillow-9.4.0-red" ></a>
-  <a href="https://pypi.org/project/gTTS/"><img src="https://img.shields.io/badge/gTTS-2.3.2-blue" ></a> 
-  
-  
-  
-<br><br>
+# CaptchaGenerator 2.0.0
 
-## About Project
-### The project is designed for Captcha telegram robot to make it easier to authenticate users. <br> Of course you can use this project elsewhere and this project is not just for telegram robots.
-<a href="https://github.com/Sepehr0Day/CaptchaGenerator/blob/main/README-FA.md">برای خواندن داکیومنت فارسی اینجا کلیک کنید.</a> 
-<br><br>
+Fast, modular CAPTCHA generation for Python with **26 ready-to-use challenges**.
 
-## Install 
-### 
-<br>
-You Can Get Project From pip use this command : 
-<br><br>
+## Install
 
-```
+```bash
 pip install CaptchaGenerator
 ```
 
-<br>
+Audio support:
 
-## How To Work?
-### This library has 7 function for Captcha Generator:
-   * 1- CaptchaGenerat
-      * Numbergen
-      * ValueScaptcha
-      * NameExport
-      * PathEXport
-      * Fonts
-      * Colors
-      * Backgrounds   
-   * 2- CaptchaGeneratRandom
-      * Numbergen
-      * ValueScaptcha
-      * NUMBERVARIANTS
-      * Backgrounds
-      * Fonts
-      * NameExport
-      * PathExport
-   * 3- CaptchaGeneratorImageRandom (Only Use In Bots)
-      * PathFolder
-      * NumberRandomSelect
-   * 4- CaptchaGeneratorImageDirectionRandom (CaptchaGeneratorIDR) (Only Use In Bots)
-      * FolderImagesAddress
-   * 5- CaptchaGeneratorAudio (Only Use In Bots)
-      * NumberGen
-      * ValuesCaptcha
-      * NameExport 
-      * PathExport
-   * 6- CaptchaGeneratorMath (Only Use In Bots)
-      *  Not have argument
-   * 7- CaptchaGeneratRandomWord (Only Use In Bots)
-      * Backgrounds
-      * PathWords 
-      * Fonts 
-      * FontSize 
-      * NameExport 
-      * PathExport
-<br>
-
-### <a href="https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/Requirement%20Resources.rar">You can download files requirement resources from here</a>
-
-## Example CaptchaGenerat :
-```python
-from CaptchaGenerator.CaptchaGenerator import Captcha
-def main():
-    NumberGen = 5
-    NameExport = "CaptchaGenerat"  
-    ValuesCaptcha = "012356789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm!@#$%&*"  
-    PathExport = r"C:\Path" 
-    Fonts = ["fonts/BrunoAce-Regular.ttf" , "fonts/AmaticSC-Bold.ttf"]
-    Colors = ["red" , "blue"] 
-    Backgrounds = ["C:/Path/Background1.png", "C:/Path/Background2.png", "C:/Path/Background3.png"]
-    choiceFromValues = Captcha.CaptchaGenerat(NumberGen=NumberGen, ValuesCaptcha=ValuesCaptcha, NameExport=NameExport, PathExport=PathExport, Fonts=Fonts, Colors=Colors, Backgrounds=Backgrounds)
-    print("Generated captcha : " + choiceFromValues)
-if __name__ == "__main__":
-    main()
+```bash
+pip install "CaptchaGenerator[audio]"
 ```
-<br>
 
-## Example CaptchaGeneratRandom :
-
+## Quick Start
 
 ```python
-from CaptchaGenerator.CaptchaGenerator import Captcha
-def main():
-    NumberGen = 5
-    NameExport = "CaptchaGenerat"  
-    ValuesCaptcha = "012356789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm!@#$%&*"  
-    PathExport = r"C:\Path" 
-    Fonts = ["fonts/BrunoAce-Regular.ttf" , "fonts/AmaticSC-Bold.ttf"]
-    Backgrounds = ["C:/Path/Background1.png", "C:/Path/Background2.png", "C:/Path/Background3.png"]
-    correct_answer, variants = Captcha.CaptchaGeneratRandom(NumberGen=NumberGen , ValuesCaptcha=ValuesCaptcha , NumberVariants=5 , Backgrounds=Backgrounds , Fonts=Fonts , NameExport=NameExport , PathExport=PathExport)
-    print("correct answer : " , correct_answer)
-    print("variants : " , variants)
-if __name__ == "__main__":
-    main()
+from CaptchaGenerator import CaptchaConfig, TextCaptcha
+
+config = CaptchaConfig(width=720, height=240, random_seed=42)
+
+answer = TextCaptcha(config).generate(
+    number_gen=6,
+    values_captcha="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",
+    name_export="captcha",
+    path_export="./output",
+    fonts=[],
+    colors=["navy", "darkred"],
+    backgrounds=[],
+    difficulty="medium",
+    style="modern",
+)
+
+print(answer)
 ```
-## You can see examples code for pyrogram in Examples folder <a href="">here</a>
 
-## Image CaptchaGenerat in Telegram(Pyrogram) :
-![Image1](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestTelegramBot.png)
-## Vidoe Test CaptchaGeneratRandom in Telegram(Pyrogram) :
-https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/35b31a23-5786-4762-bb5c-d27651486d67
-## Image CaptchaGeneratorImageRandom in Telegram(Pyrogram) :
-![Image2](https://raw.githubusercontent.com/Sepehr0Day/CaptchaGenerator/main/TestCaptchaGeneratorImageRandom.png)
-## Vidoe Test CaptchaGeneratorImageDirectionRandom in Telegram(Pyrogram) :
-https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/b6075908-0f42-4673-b02d-8dd04200952e
-## Vidoe Test CaptchaGeneratorAudio in Telegram(Pyrogram) :
-https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/dcd203c8-a3db-4152-a24e-2694fba0cb8b
-## Vidoe Test CaptchaGeneratorMath in Telegram(Pyrogram) :
-https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/a3e84e0d-3749-49e4-8d11-50ce53618551
-## Vidoe Test CaptchaGeneratRandomWord in Telegram(Pyrogram) :
-https://github.com/Sepehr0Day/CaptchaGenerator/assets/61628516/ebd9aa1c-4d6b-48fb-8048-1037bfa42cb1
-# By <a href="https://t.me/sepehr0day">Sepehr0Day</a>
+## Included CAPTCHAs
 
-## update in coming...
-*Star this repository if you found it useful ⭐*
-  
+- **Text:** text, random text, words and missing characters
+- **Logic:** math, sequences, custom questions and visual logic
+- **Images:** grids, rotation, direction, upside-down objects and click points
+- **Puzzles:** sliders, irregular pieces, patterns and mazes
+- **Visual:** clocks, colors, shapes, odd-one-out and 3D perspective
+- **Media:** animated and audio CAPTCHA
+
+All generators are available through `CaptchaGenerator.SUPPORTED_CAPTCHAS`.
+
+## Customization
+
+Use `CaptchaConfig` to control dimensions, colors, fonts, output format,
+quality, accessibility text, random seed and render hooks.
+
+Visual challenges return a `ChallengeResult` containing:
+
+- `path` - generated image
+- `answer` - expected answer; keep it server-side
+- `prompt` - user instruction
+- `metadata` - integration data
+- `accessibility_text` - accessible description
+
+## Examples
+
+Each CAPTCHA has standalone simple and Tkinter examples:
+
+```text
+Examples/CaptchaExamples/<CaptchaName>/
+  simple.py
+  interactive.py
+```
+
+## Security
+
+Never expose answers, target coordinates or puzzle solutions to an untrusted
+client. Validate responses on the server.
+
+## License
+
+MIT
