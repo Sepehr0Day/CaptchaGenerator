@@ -1,6 +1,15 @@
 # CaptchaGenerator 2.0.0
 
+[![Tests](https://github.com/Sepehr0Day/CaptchaGenerator/actions/workflows/tests.yml/badge.svg)](https://github.com/Sepehr0Day/CaptchaGenerator/actions/workflows/tests.yml)
+[![Package](https://github.com/Sepehr0Day/CaptchaGenerator/actions/workflows/package.yml/badge.svg)](https://github.com/Sepehr0Day/CaptchaGenerator/actions/workflows/package.yml)
+[![Python](https://img.shields.io/badge/Python-3.11--3.14-3776AB)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 Fast, modular CAPTCHA generation for Python with **26 ready-to-use challenges**.
+
+[Documentation](https://github.com/Sepehr0Day/CaptchaGenerator/wiki) ·
+[Examples](Examples/CaptchaExamples) ·
+[Release 2.0.0](https://github.com/Sepehr0Day/CaptchaGenerator/releases/tag/v2.0.0)
 
 ## Install
 

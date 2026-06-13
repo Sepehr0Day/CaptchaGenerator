@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest a generator, option or integration
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: What limitation or use case should be addressed?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Alternatives
+
